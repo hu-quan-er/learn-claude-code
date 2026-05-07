@@ -8,9 +8,10 @@
 .
 ├── analysis-docs/                  整体架构与各子系统概览（13 篇）
 ├── context-management-analysis/    上下文管理与压缩机制深度分析（8 篇）
-└── skill-analysis-docs/            skill 模块专题
-    ├── 01~04                       结论型速查（4 篇）
-    └── guided-tour/                带读源码的渐进式教程（11 篇）
+├── skill-analysis-docs/            skill 模块专题
+│   ├── 01~04                       结论型速查（4 篇）
+│   └── guided-tour/                带读源码的渐进式教程（11 篇）
+└── core-models-analysis/           核心实体模型与设计思想（9 篇）
 ```
 
 ### `analysis-docs/`
@@ -68,6 +69,20 @@ skill 模块专题，分两层：
 - 08 热更新与缓存失效
 - 09 编一个自己的 skill（动手验证）
 - 10 常见疑惑与陷阱
+
+### `core-models-analysis/`
+
+7 个核心实体 model 的逐字段精读 + 设计哲学综合，目标是"通过模型设计反推 claude-code 的思考方式"：
+
+- 00 模型地图（7 个 model 的关系总图）
+- 01 Command — 命令的统一抽象（PromptCommand / LocalCommand / LocalJSXCommand）
+- 02 Tool — 工具的统一抽象（含 ToolUseContext 50+ 字段信封）
+- 03 Message — 消息系统（6 大类 + 14 SystemMessage subtype + 30+ Attachment）
+- 04 AppState — 全局状态模型（95+ 字段 / DeepImmutable 边界）
+- 05 Permission — 权限规则与决策（rules / decisions / 11 reasons）
+- 06 Hook — 生命周期钩子（27 events + 13 特化 schema）
+- 07 Plugin — 插件清单与加载结果（30+ PluginError type-first）
+- 08 设计哲学（12 条可复用设计原则总结）
 
 ## 一些说明
 
