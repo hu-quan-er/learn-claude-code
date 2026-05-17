@@ -6,7 +6,7 @@
 
 ```
 .
-├── analysis-docs/                  整体架构与各子系统概览（13 篇，含 TodoList 拆分专题）
+├── analysis-docs/                  整体架构与各子系统概览（14 篇，含 TodoList + AgentTool 拆分专题）
 ├── context-management-analysis/    上下文管理与压缩机制深度分析（8 篇）
 ├── skill-analysis-docs/            skill 模块专题
 │   ├── 01~04                       结论型速查（4 篇）
@@ -32,6 +32,7 @@ claude-code 全局视角，每篇聚焦一个子系统：
 - 11 SDK 编程接口与会话管理
 - 12 认证系统与插件
 - 13 TodoList 实现机制（入口页，细节拆分在 `analysis-docs/todolist/`）
+- 14 AgentTool 子代理专题（拆分在 `analysis-docs/agent/`，10 篇）
 
 ### `context-management-analysis/`
 
