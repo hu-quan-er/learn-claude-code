@@ -42,5 +42,6 @@ export function isTodoV2Enabled(): boolean {
 | [03-工具传递与tool_use决策链路](./todolist/03-工具传递与tool_use决策链路.md) | 工具如何转成 API `tools` 数组、模型如何返回 `tool_use`、runtime 如何回填 `tool_result` |
 | [04-端到端数据流模拟](./todolist/04-端到端数据流模拟.md) | 模拟 V1 和 V2 从用户请求到任务创建、更新、完成、清理的完整数据流 |
 | [05-设计取舍与阅读路径](./todolist/05-设计取舍与阅读路径.md) | V1/V2 的设计优缺点、脏点、建议源码阅读路径 |
+| [06-tools数组中todo工具的prompt拼接与内容](./todolist/06-tools数组中todo工具的prompt拼接与内容.md) | 逐字展示 5 个 todo 工具最终进入 API `tools[].description` 的 prompt 文本与 swarm 分支差异 |
 
 一句话总结：**V1 TodoWrite 是模型上下文里的轻量 checklist；V2 Task tools 是交互式 CLI 的可持久化任务系统。**
