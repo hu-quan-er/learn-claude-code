@@ -218,7 +218,7 @@ Repository identifier, usually same as source
 
 plugin 自己的配置——key 是用户在 settings 里给的（`{user_config.<plugin>.<key>}`），value 任意。
 
-`createPluginCommand` 在 prompt 展开时用它替换 `${user_config.xxx}`（参考 skill-analysis-docs 03 篇 9.3 节）。
+`createPluginCommand` 在 prompt 展开时用它替换 `${user_config.xxx}`（参考 `topics/skill/03-creation-and-definition.md` 9.3 节）。
 
 ---
 

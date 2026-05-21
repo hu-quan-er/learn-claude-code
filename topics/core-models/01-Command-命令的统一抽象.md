@@ -2,7 +2,7 @@
 
 > 这一篇做一件事：把 `restored-src/src/types/command.ts` 全部 217 行**作为 model 本身**讲透——每个字段是什么、为什么存在、和谁配合工作、设计哲学是什么。
 >
-> 与 `skill-analysis-docs/guided-tour/02-类型系统先行.md` 的差别：那篇是从"读懂 skill 模块"的角度切入；这一篇是从"理解 Command 这个 model 的整体设计"切入。重叠是必然的，但视角不同——这一篇会更聚焦"为什么 Command 要长这样"，把它放在所有 model 之间的关系里看。
+> 与 `topics/skill/guided-tour/02-类型系统先行.md` 的差别：那篇是从"读懂 skill 模块"的角度切入；这一篇是从"理解 Command 这个 model 的整体设计"切入。重叠是必然的，但视角不同——这一篇会更聚焦"为什么 Command 要长这样"，把它放在所有 model 之间的关系里看。
 
 ---
 
