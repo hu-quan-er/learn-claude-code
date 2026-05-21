@@ -6,7 +6,7 @@
 
 ```
 .
-├── analysis-docs/                  整体架构与各子系统概览（15 篇，含 TodoList / AgentTool / prompt-injection 拆分专题）
+├── analysis-docs/                  整体架构与各子系统概览（16 篇，含 TodoList / AgentTool / prompt-injection / messages-pipeline 拆分专题）
 ├── context-management-analysis/    上下文管理与压缩机制深度分析（8 篇）
 ├── skill-analysis-docs/            skill 模块专题
 │   ├── 01~04                       结论型速查（4 篇）
@@ -34,6 +34,7 @@ claude-code 全局视角，每篇聚焦一个子系统：
 - 13 TodoList 实现机制（入口页，细节拆分在 `analysis-docs/todolist/`）
 - 14 AgentTool 子代理专题（拆分在 `analysis-docs/agent/`，10 篇）
 - 15 prompt-injection 防御专题（拆分在 `analysis-docs/prompt-injection/`，7 篇）
+- 16 messages-pipeline 消息规范化管线专题（拆分在 `analysis-docs/messages-pipeline/`，9 篇）
 
 ### `context-management-analysis/`
 
