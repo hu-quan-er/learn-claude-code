@@ -45,6 +45,7 @@ claude-code 全局视角，每篇聚焦一个子系统：
 | [`topics/core-models/`](./topics/core-models/) | 9 | 7 个核心实体 model 逐字段精读 + 设计哲学 |
 | [`topics/skill/`](./topics/skill/) | 16 | skill 模块专题：结论速查 4 篇 + guided-tour 渐进式教程 11 篇 |
 | [`topics/bashtool/`](./topics/bashtool/) | 11 | BashTool ~26K 行：tree-sitter 命令解析 / AST security 23 validators / permission 决策 / 只读与路径校验 / sed 与 wrapper specs / Sandbox / 执行层与环境 |
+| [`topics/swarm/`](./topics/swarm/) | 13 | Multi-agent swarm ~10K 行：双重 gate / 3 backend (tmux/iTerm2/in-process) / file-based mailbox 1183 行 / 协议消息状态机 / inProcessRunner 1552 行 / permissionSync 928 行 / spawnMultiAgent 1093 行 / Team Memory 与 secret 防护 / 端到端协作推演 |
 
 ### `topics/todolist/`
 
@@ -92,6 +93,10 @@ prompt-injection 防御专题（README + 00~06 共 8 篇）：6 层纵深防御�
 ### `topics/bashtool/`
 
 BashTool 安全沙箱与命令解析专题（README + 00~09 共 11 篇，~5K 行）：tree-sitter AST 解析、`bashSecurity.ts` 23 个 validator、`bashPermissions.ts` 8 步决策树、wildcard 与 wrapper 透视、`BINARY_HIJACK_VARS` 防动态链接劫持、`readOnlyValidation` + `pathValidation`、sed 模拟执行、wrapper specs、Darwin sandbox-exec、`subprocessEnv` 凭据隔离、O_NOFOLLOW 防符号链接攻击。完整覆盖让 LLM 跑 shell 这件事所有防御层。
+
+### `topics/swarm/`
+
+Multi-agent Swarm 专题（README + 00~11 共 13 篇，~6.8K 行）：`isAgentSwarmsEnabled` 双重 gate、3 种 backend (tmux/iTerm2/in-process)、AsyncLocalStorage in-process 隔离、file-based teammate mailbox 1183 行、SendMessage 4 种地址、5 对协议消息状态机（shutdown/plan_approval/permission/sandbox_permission/idle_notification）、inProcessRunner 1552 行（3 个独立 abortController、协议必需工具强制注入、任务自动认领）、permissionSync 928 行（worker → leader 文件协议 + mailbox doorbell + leaderPermissionBridge）、spawnMultiAgent 1093 行批量派发、Team Memory 与 gitleaks-based secret 防护、20 步端到端协作推演。
 
 ### `topics/skill/`
 
