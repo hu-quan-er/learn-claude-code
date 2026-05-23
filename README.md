@@ -44,6 +44,7 @@ claude-code 全局视角，每篇聚焦一个子系统：
 | [`topics/context-management/`](./topics/context-management/) | 8 | 上下文管理与压缩机制深度分析 |
 | [`topics/core-models/`](./topics/core-models/) | 9 | 7 个核心实体 model 逐字段精读 + 设计哲学 |
 | [`topics/skill/`](./topics/skill/) | 16 | skill 模块专题：结论速查 4 篇 + guided-tour 渐进式教程 11 篇 |
+| [`topics/bashtool/`](./topics/bashtool/) | 11 | BashTool ~26K 行：tree-sitter 命令解析 / AST security 23 validators / permission 决策 / 只读与路径校验 / sed 与 wrapper specs / Sandbox / 执行层与环境 |
 
 ### `topics/todolist/`
 
@@ -87,6 +88,10 @@ prompt-injection 防御专题（README + 00~06 共 8 篇）：6 层纵深防御�
 - 06 Hook — 生命周期钩子（27 events + 13 特化 schema）
 - 07 Plugin — 插件清单与加载结果（30+ PluginError type-first）
 - 08 设计哲学（12 条可复用设计原则总结）
+
+### `topics/bashtool/`
+
+BashTool 安全沙箱与命令解析专题（README + 00~09 共 11 篇，~5K 行）：tree-sitter AST 解析、`bashSecurity.ts` 23 个 validator、`bashPermissions.ts` 8 步决策树、wildcard 与 wrapper 透视、`BINARY_HIJACK_VARS` 防动态链接劫持、`readOnlyValidation` + `pathValidation`、sed 模拟执行、wrapper specs、Darwin sandbox-exec、`subprocessEnv` 凭据隔离、O_NOFOLLOW 防符号链接攻击。完整覆盖让 LLM 跑 shell 这件事所有防御层。
 
 ### `topics/skill/`
 
