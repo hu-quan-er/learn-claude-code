@@ -41,9 +41,9 @@ claude-code 全局视角，每篇聚焦一个子系统：
 | [`topics/agent/`](./topics/agent/) | 11 | 子代理 5 种 spawn 模式 / 并行调度 / 模型选择 / runAgent / fork + worktree 隔离 / agent memory / 生命周期 |
 | [`topics/prompt-injection/`](./topics/prompt-injection/) | 8 | 威胁模型 / `<system-reminder>` 标签 / FileRead 双护栏 / Unicode 清洗 / 友方注入预算 / 外部工具隔离 |
 | [`topics/messages-pipeline/`](./topics/messages-pipeline/) | 10 | 消息类型 / 流式事件 / normalize 主循环 / 合并 smoosh hoist / tool_reference 协议事故 / 协议合规过滤 / attachment normalizer |
-| [`topics/context-management/`](./topics/context-management/) | 8 | 上下文管理与压缩机制深度分析 |
+| [`topics/context-management/`](./topics/context-management/) | 9 | 上下文管理与压缩机制深度分析，含 skill/tool 上下文保留策略 |
 | [`topics/core-models/`](./topics/core-models/) | 9 | 7 个核心实体 model 逐字段精读 + 设计哲学 |
-| [`topics/skill/`](./topics/skill/) | 16 | skill 模块专题：结论速查 4 篇 + guided-tour 渐进式教程 11 篇 |
+| [`topics/skill/`](./topics/skill/) | 11 | skill 模块渐进式教程：学习路线图 / 类型系统 / 装载 / 执行 / 动态发现 / 热更新 |
 | [`topics/bashtool/`](./topics/bashtool/) | 11 | BashTool ~26K 行：tree-sitter 命令解析 / AST security 23 validators / permission 决策 / 只读与路径校验 / sed 与 wrapper specs / Sandbox / 执行层与环境 |
 | [`topics/swarm/`](./topics/swarm/) | 13 | Multi-agent swarm ~10K 行：双重 gate / 3 backend (tmux/iTerm2/in-process) / file-based mailbox 1183 行 / 协议消息状态机 / inProcessRunner 1552 行 / permissionSync 928 行 / spawnMultiAgent 1093 行 / Team Memory 与 secret 防护 / 端到端协作推演 |
 | [`topics/mcp/`](./topics/mcp/) | 12 | MCP 协议层 ~16K 行：8 种 transport / 3 套认证 (PKCE/XAA/Claude.ai) / `tokens()` 7.2% CPU 教训 / .mcpb bundle + sensitive 分流 / 6 层 channel gate / 5-letter 权限 ID / useManageMCPConnections 1141 行 batched updates + exponential backoff |
@@ -76,6 +76,7 @@ prompt-injection 防御专题（README + 00~06 共 8 篇）：6 层纵深防御�
 - 05 完整系统提示词示例
 - 06 脏设计与特殊兼容机制总结
 - 07 完整数据流示例（三轮对话）
+- 08 Skill 与 Tool 上下文保留策略
 
 ### `topics/core-models/`
 
@@ -105,16 +106,7 @@ MCP 协议层专题（README + 00~11 共 12 篇，~6.2K 行）：8 种 transport
 
 ### `topics/skill/`
 
-skill 模块专题，分两层：
-
-**结论型速查（4 篇）** — 已经熟悉源码、想快速查某个细节时用：
-
-- 01 架构总览
-- 02 管理与装载机制
-- 03 创建方式与定义格式
-- 04 使用与执行机制
-
-**渐进式教程 `guided-tour/`（11 篇）** — 第一次系统读这块代码时用，每一步配精确文件 + 行号：
+skill 模块专题已合并为一层渐进式教程，只保留这 11 篇内容：
 
 - 00 学习路线图
 - 01 从一个例子开始（verify skill 端到端追踪）

@@ -155,7 +155,7 @@ export type LoadedPlugin = {
   enabled?: boolean
   isBuiltin?: boolean
   sha?: string                                   // git commit SHA
-  
+
   // 7 种组件路径（每种可能多个）
   commandsPath?: string
   commandsPaths?: string[]
@@ -166,7 +166,7 @@ export type LoadedPlugin = {
   skillsPaths?: string[]
   outputStylesPath?: string
   outputStylesPaths?: string[]
-  
+
   // 直接配置
   hooksConfig?: HooksSettings
   mcpServers?: Record<string, McpServerConfig>
@@ -218,7 +218,7 @@ Repository identifier, usually same as source
 
 plugin 自己的配置——key 是用户在 settings 里给的（`{user_config.<plugin>.<key>}`），value 任意。
 
-`createPluginCommand` 在 prompt 展开时用它替换 `${user_config.xxx}`（参考 `topics/skill/03-creation-and-definition.md` 9.3 节）。
+`createPluginCommand` 在 prompt 展开时用它替换 `${user_config.xxx}`（参考 `topics/skill/03-装载层逐行精读.md` 的 Command 构造部分）。
 
 ---
 
@@ -517,19 +517,19 @@ PluginManifest = {
   version?: string
   description?: string
   author?: PluginAuthor
-  
+
   // 组件声明
   commands?: string | string[]            // 路径
   agents?: string | string[]
   skills?: string | string[]
   outputStyles?: string | string[]
-  
+
   hooks?: HooksSettings | string          // 内联或路径
   mcpServers?: Record<string, McpServerConfig>
   lspServers?: Record<string, LspServerConfig>
-  
+
   dependencies?: Record<string, string>   // plugin 间依赖
-  
+
   // 用户配置 schema
   configSchema?: ...                      // JSON schema
 }
